@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Book your next trip with Travel Smart." />
+  <meta name="keywords" content="Book trip, travel booking, flight booking" />
+  <link rel="stylesheet" href="travelsmart.css">
+  <title>Book a Trip | Travel Smart</title>
+</head>
+<body>
+    <header>
+        <div class="nav-wrapper">
+            <a href="travelsmart.html"><img src="./TS photos/Travelsmart logo.png" alt="Travel Smart logo" /></a>
+            <ul class="nav-links">
+                <li><a href="travelsmart.html">Home</a></li>
+                <li><a href="travelsmart-about.html">About</a></li>
+                <li><a href="travelsmart-destination.html">Destinations</a></li>
+                <li><a href="travelsmart-booking.html">Booking</a></li>
+                <li><a href="travelsmart-contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+    
+    <section class="hero" style="background: url('./TS\ photos/jack-ward-rknrvCrfS1k-unsplash.jpg') center/cover no-repeat;">
+        <div class="hero-content">
+            <h1>Book Your Next Journey</h1>
+            <p>Secure your adventure today. Hassle-free, affordable, unforgettable.</p>
+        </div>
+    </section>
+
+  <section class="flight-booking-section">
+  <div class="booking-container">
+    <h2 class="section-title">Book Your Flight</h2>
+
+    <form class="flight-booking-form">
+      <div class="trip-type">
+        <label><input type="radio" name="trip" checked> Round Trip</label>
+        <label><input type="radio" name="trip"> One Way</label>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="from">From</label>
+          <input type="text" id="from" placeholder="e.g. Lagos (LOS)">
+        </div>
+
+        <div class="form-group">
+          <label for="to">To</label>
+          <input type="text" id="to" placeholder="e.g. Nairobi (NBO)">
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="depart">Departure</label>
+          <input type="date" id="depart">
+        </div>
+
+        <div class="form-group">
+          <label for="return">Return</label>
+          <input type="date" id="return">
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="passengers">Passengers</label>
+          <select id="passengers">
+            <option value="1">1 Adult</option>
+            <option value="2">2 Adults</option>
+            <option value="3">3 Adults</option>
+            <option value="4">4 Adults</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="class">Class</label>
+          <select id="class">
+            <option value="economy">Economy</option>
+            <option value="premium">Premium Economy</option>
+            <option value="business">Business</option>
+            <option value="first">First Class</option>
+          </select>
+        </div>
+      </div>
+
+      <button type="submit" class="book-btn">Search Flights</button>
+    </form>
+  </div>
+</section>
+
+<!-- Accommodation Section -->
+<div class="addon-section">
+  <label>
+    <input type="checkbox" id="addAccommodation" onclick="toggleAccommodation()"> Add Accommodation
+  </label>
+
+  <div id="accommodationDetails" class="addon-details hidden">
+    <div class="form-group">
+      <label for="hotel-location">Hotel Location</label>
+      <input type="text" id="hotel-location" placeholder="e.g. Istanbul City Center">
+    </div>
+    <div class="form-group">
+      <label for="checkin">Check-in</label>
+      <input type="date" id="checkin">
+    </div>
+    <div class="form-group">
+      <label for="checkout">Check-out</label>
+      <input type="date" id="checkout">
+    </div>
+  </div>
+</div>
+
+<!-- Airport Pickup Section -->
+<div class="addon-section">
+  <label>
+    <input type="checkbox" id="addPickup" onclick="togglePickup()"> Add Airport Pickup
+  </label>
+
+  <div id="pickupDetails" class="addon-details hidden">
+    <div class="form-group">
+      <label for="pickup-location">Pickup Address</label>
+      <input type="text" id="pickup-location" placeholder="e.g. Murtala Muhammed Airport, Lagos">
+    </div>
+    <div class="form-group">
+      <label for="arrival-time">Estimated Arrival Time</label>
+      <input type="time" id="arrival-time">
+    </div>
+  </div>
+</div>
+
+  <footer>
+        <div class="container footer-grid">
+            <figure class="footer-brand">
+                <img src="./TS photos/Travelsmart logo.png" alt="Travel Smart Logo" style="height: 50px; margin-bottom: 1rem;">
+                <p>Explore smarter. Travel deeper. Your go-to guide for unforgettable journeys around the globe.</p>
+            </figure>
+            
+            <nav class="footer-nav">
+                <h4>Sitemap</h4>
+                <ul>
+                    <li><a href="travelsmart.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="destinations.html">Destinations</a></li>
+                    <li><a href="booking.html">Book a Trip</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#features">Why Travel Smart</a></li>
+                    <li><a href="#destinations-preview">Popular Destinations</a></li>
+                    <li><a href="#blog-preview">Blog</a></li>
+                    <li><a href="#newsletter">Newsletter</a></li>
+                </ul>
+            </nav>
+
+            <div class="footer-contact">
+                <h4>Stay Connected</h4>
+                <p>Email: info@travelsmart.com</p>
+                <p>Phone: +234 800 000 0000</p>
+                
+                <figure class="social-icons">
+                    <a href="#"><img src="facebook-icon.png" alt="Facebook" /></a>
+                    <a href="#"><img src="instagram-icon.png" alt="Instagram" /></a>
+                    <a href="#"><img src="twitter-icon.png" alt="Twitter" /></a>
+                </figure>
+            </div>
+        </div>
+    
+        <div class="footer-bottom">
+            <p>&copy; 2025 Travel Smart. All rights reserved. | Designed in Nigeria</p>
+        </div>
+    </footer>
+
+    <script>
+  function toggleAccommodation() {
+    const details = document.getElementById("accommodationDetails");
+    const checkbox = document.getElementById("addAccommodation");
+    details.classList.toggle("hidden", !checkbox.checked);
+  }
+
+  function togglePickup() {
+    const details = document.getElementById("pickupDetails");
+    const checkbox = document.getElementById("addPickup");
+    details.classList.toggle("hidden", !checkbox.checked);
+  }
+</script>
+
+</body>
+</html>
